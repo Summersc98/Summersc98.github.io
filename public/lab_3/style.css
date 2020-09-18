@@ -7,14 +7,14 @@ html, body {
 
 html {
   font-size: 10px;
-  background-color: #6091C3;
+  background-color: #0080ff;
 }
 
 body {
   width: 70%;
   min-width: 800px;
   margin: 0 auto;
-  background-color: #6091C3;
+  background-color: #0080ff;
 }
 
 /* || typography */
