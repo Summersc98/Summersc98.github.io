@@ -35,7 +35,7 @@ h1 {
 }
 
 .flex-outer li button {
-    margin-left: 25%;
+    margin-left: 0px;
     padding: 12px 200px;
     border: solid #288241;
     background: #32a852;
