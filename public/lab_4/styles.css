@@ -33,3 +33,11 @@ body {
     letter-spacing: .29em;
     border-radius: 4px;
   }
+
+  .flex-inner li {
+    width: 100px;
+  }
+
+  .flex-inner {
+    justify-content: space-between;
+  }
