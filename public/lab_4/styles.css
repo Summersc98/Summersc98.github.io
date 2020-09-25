@@ -8,6 +8,10 @@ h1 {
   text-align: center;
 }
 
+.flex-outer {
+    max-width: 800px;
+}
+
 .flex-outer li,
 .flex-inner {
   display: flex;
