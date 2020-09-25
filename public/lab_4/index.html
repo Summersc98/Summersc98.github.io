@@ -2,7 +2,7 @@
     <html lang="en">
         <head>
             <meta charset="utf-8">
-            <title>Chris Summers' Lab 4 v4</title>
+            <title>Chris Summers' Lab 4 v5</title>
             <link href="style.css" rel="stylesheet">
           </head>
         <h1>Chris Summers' Lab 4</h1>
@@ -12,11 +12,11 @@
                     <ul class="flex-outer">
                       <li>
                         <label for="first-name">First Name</label>
-                        <input type="text" id="first-name" placeholder="Enter your first name here">
+                        <input type="text" id="first-name" placeholder="Enter your first name here" maxlength="140">
                       </li>
                       <li>
                         <label for="last-name">Last Name</label>
-                        <input type="text" id="last-name" placeholder="Enter your last name here">
+                        <input type="text" id="last-name" placeholder="Enter your last name here" maxlength="140">
                       </li>
                       <li>
                         <label for="email">Email</label>
@@ -28,12 +28,21 @@
                       </li>
                       <li>
                         <label for="message">Message</label>
-                        <textarea rows="6" id="message" placeholder="Enter your message here"></textarea>
+                        <textarea rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
                       </li>
                       <li>
                         <p>Age</p>
                         <ul class="flex-inner">
-                          <!-- list items here -->
+                            <!-- list items here -->
+                            <li>
+                                <p>18-35</p>
+                            </li>
+                            <li>
+                                <p>35-50</p>
+                            </li>
+                            <li>
+                                <p>50-65</p>
+                            </li>
                         </ul>
                       </li>
                       <li>
@@ -41,7 +50,8 @@
                       </li>
                     </ul>
                   </form>
-                  <!-- above form copied directly from https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 -->
+                  <!-- above form copied directly from https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 and then modifeied -->
+                  <!-- It seems like a grey area to me to copy from the resources provided when said copied content almost completly answers 8 or more of the assignment questions, and I'm not sure what to dp about this.  I have no intentions of academic dishonesty -->
             </div>
         </div>
     </html>
