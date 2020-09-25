@@ -12,8 +12,8 @@ body {
 .flex-outer > li > label,
 .flex-outer li p {
   flex: 1 0 120px;
-  max-width: 50px;
-  padding: 12px 6px;
+  max-width: 220px;
+  padding: 20px 12px;
 }
  
 .flex-outer > li > label + *,
