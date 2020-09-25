@@ -42,7 +42,7 @@ h1 {
     color: #000000;
     text-transform: uppercase;
     letter-spacing: .09em;
-    border-radius: 4px;
+    border-radius: 3px;
   }
 
   .flex-inner li {
