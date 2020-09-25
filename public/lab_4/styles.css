@@ -50,5 +50,5 @@ h1 {
   }
 
   .flex-inner {
-    justify-content: space-around;
+    justify-content: space-between;
   }
