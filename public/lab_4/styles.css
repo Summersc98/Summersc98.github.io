@@ -19,7 +19,7 @@ body {
 .flex-outer > li > label + *,
 .flex-inner {
   flex: 1 0 220px;
-  max-width: 300px;
+  max-width: 60%;
 }
 
 .flex-outer li button {
