@@ -20,7 +20,7 @@ body {
 .flex-inner {
   flex: 1 0 220px;
   max-width: 60%;
-  padding: 30px 16px;
+  padding: 4px 4px;
 }
 
 .flex-outer li button {
