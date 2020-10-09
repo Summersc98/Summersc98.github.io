@@ -1,24 +1,19 @@
-/* eslint-disable linebreak-style */
-/* eslint-disable space-infix-ops */
-/* eslint-disable no-alert */
-/* eslint-disable comma-spacing */
-/* eslint-disable func-names */
-/* eslint-disable indent */
-/* eslint-disable prefer-const */
-/* eslint-disable no-multiple-empty-lines */
-/* eslint-disable spaced-comment */
+const { arrayBufferToBlob } = require("cypress/types/blob-util");
+
 const myHeading = document.querySelector('h1');
 myHeading.textContent = 'the js loaded properly';
 
 const btn = document.querySelector('button');
 function random(number) {
-  return Math.floor(Math.random() * (number+1));
+  return Math.floor(Math.random() * (number + 1));
 }
 btn.onclick = function() {
-  const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+  const rndCol = `rgb(${random(255)},${random(255)},${random(255)})`;
   document.body.style.backgroundColor = rndCol;
 };
-//let button = document.querySelector('button');
-//button.style.marginRight = '10px';
 
+// let button = document.querySelector('button');
+// button.style.marginRight = '10px';
 
+//make a list from an arry \/
+array.from(document.querySelectorAll('h2'))

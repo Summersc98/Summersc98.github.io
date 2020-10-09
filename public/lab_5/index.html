@@ -58,13 +58,27 @@
                     </form>
                 </div>
           </div>
-          <script src="scripts/main.js"></script>
+          <!--<script src="scripts/main.js"></script>-->
           <script>
+            //random color generation from
+            //https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Building_blocks/Events
+            function random(number) {
+                      return Math.floor(Math.random() * (number+1));
+                    }
             function testFunction() {
               fetch('/api')
               .then((response) => response.text())
               .then((response) => {
                     console.log(response);
+                    document.querySelector('h1').textContent = response;
+                    const rndCol = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+                    document.body.style.backgroundColor = rndCol;
+                    //i know i could've just picked a color, but the idea of it being different every time was just too cool
+                    document.querySelector('.flex-outer').style.margin = "0 auto";
+
+              
+
+
               })
             }
           </script>
