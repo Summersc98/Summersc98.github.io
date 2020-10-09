@@ -1,68 +1,72 @@
 <!DOCTYPE html>
     <html lang="en">
         <head>
-            <meta charset="utf-8">
-            <title>Chris Summers' Lab 4</title>
-            <link href="styles.css" rel="stylesheet">
-          </head>
-        <div class="wrapper">
-            <div class="container">
-                <h1>Chris Summers' Lab 4</h1>
-                <form action="/api" method="post">
-                    <ul class="flex-outer">
-                      <li>
-                        <label for="fname">First Name</label>
-                        <input name="fname" type="text" id="fname" placeholder="Enter your first name here" maxlength="140">
-                      </li>
-                      <li>
-                        <label for="lname">Last Name</label>
-                        <input name="lname" type="text" id="lname" placeholder="Enter your last name here" maxlength="140">
-                      </li>
-                      <li>
-                        <label for="email">Email</label>
-                        <input name="email" type="email" id="email" placeholder="Enter your email here">
-                      </li>
-                      <li>
-                        <label for="phone">Phone</label>
-                        <input name="phone" type="tel" id="phone" placeholder="Enter your phone here">
-                      </li>
-                      <li>
-                        <label for="message">Message</label>
-                        <textarea name="message" rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
-                      </li>
-                      <li>
-                        <p class="checkbox-list-label">Age</p>
-                        <ul class="flex-inner">
-                            <li>
-                              <input name="eighteen-to-thirtyfive" type="checkbox" id="eighteen-to-thirtyfive">
-                              <label for="eighteen-to-thirtyfive">18-35</label>
-                            </li>
-                            <li>
-                              <input name="thirtyfive-to-fifty" type="checkbox" id="thirtyfive-to-fifty">
-                              <label for="thirtyfive-to-fifty">35-50</label>
-                            </li>
-                            <li>
-                                <input name="fifty-to-sixtyfive" type="checkbox" id="fifty-to-sixtyfive">
-                                <label for="fifty-to-sixtyfive">50-65</label>
-                            </li>
-                          </ul>
-                      </li>
-                      <li>
-                        <button name="submit" id="submit" type="button">Submit</button>
-                      </li>
-                      <li>
-                        <button name="activate" id="activate" type="button">Activate</button>
-                      </li>
-                    </ul>
-                  </form>
-              </div>
-        </div>
-        <script src="scripts/main.js"></script>
-        function testFunction() {
-          fetch('/api')
-          .then((response) => response.text())
-          .then((response) => {
-               console.log(response);
-          })
-        }
+          <meta charset="utf-8">
+          <title>Chris Summers' Lab 4</title>
+          <link href="styles.css" rel="stylesheet">
+        </head>
+        <body>
+          <div class="wrapper">
+              <div class="container">
+                  <h1>Chris Summers' Lab 4</h1>
+                  <form action="/api" method="post">
+                      <ul class="flex-outer">
+                        <li>
+                          <label for="fname">First Name</label>
+                          <input name="fname" type="text" id="fname" placeholder="Enter your first name here" maxlength="140">
+                        </li>
+                        <li>
+                          <label for="lname">Last Name</label>
+                          <input name="lname" type="text" id="lname" placeholder="Enter your last name here" maxlength="140">
+                        </li>
+                        <li>
+                          <label for="email">Email</label>
+                          <input name="email" type="email" id="email" placeholder="Enter your email here">
+                        </li>
+                        <li>
+                          <label for="phone">Phone</label>
+                          <input name="phone" type="tel" id="phone" placeholder="Enter your phone here">
+                        </li>
+                        <li>
+                          <label for="message">Message</label>
+                          <textarea name="message" rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
+                        </li>
+                        <li>
+                          <p class="checkbox-list-label">Age</p>
+                          <ul class="flex-inner">
+                              <li>
+                                <input name="eighteen-to-thirtyfive" type="checkbox" id="eighteen-to-thirtyfive">
+                                <label for="eighteen-to-thirtyfive">18-35</label>
+                              </li>
+                              <li>
+                                <input name="thirtyfive-to-fifty" type="checkbox" id="thirtyfive-to-fifty">
+                                <label for="thirtyfive-to-fifty">35-50</label>
+                              </li>
+                              <li>
+                                  <input name="fifty-to-sixtyfive" type="checkbox" id="fifty-to-sixtyfive">
+                                  <label for="fifty-to-sixtyfive">50-65</label>
+                              </li>
+                            </ul>
+                        </li>
+                        <li>
+                          <button name="submit" id="submit" type="submit">Submit</button>
+                        </li>
+                        <li>
+                          <button name="activate" id="activate" type="button">Activate</button>
+                        </li>
+                      </ul>
+                    </form>
+                </div>
+          </div>
+          <script src="scripts/main.js"></script>
+          <script>
+            function testFunction() {
+              fetch('/api')
+              .then((response) => response.text())
+              .then((response) => {
+                  console.log(response);
+              })
+            }
+          </script>
+        </body>
     </html>
