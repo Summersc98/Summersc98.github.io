@@ -76,7 +76,17 @@
                     //i know i could've just picked a color, but the idea of it being different every time was just too cool
                     document.querySelector('.flex-outer').style.margin = "0 auto";
 
-              
+                    function lectureFunction() {
+                      //this function is from the end of lecture 6.2
+                      const elements = document.querySelectorAll('.flex-inner li label')
+                      const fruit_list = ['strawberry', 'orange', 'banana']
+                      elements.forEach((el, i) => {
+                        const text = el.innerText;
+                        //consol.log(text);
+                        el.innerText = fruit_list[i];
+                      })
+                    }
+                    lectureFunction();
 
 
               })
