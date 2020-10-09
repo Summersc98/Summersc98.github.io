@@ -31,7 +31,7 @@
                         <textarea name="message" rows="5" cols="33" id="message" placeholder="Enter your message here"></textarea>
                       </li>
                       <li>
-                        <p>Age</p>
+                        <p class="checkbox-list-label">Age</p>
                         <ul class="flex-inner">
                             <li>
                               <input name="eighteen-to-thirtyfive" type="checkbox" id="eighteen-to-thirtyfive">
@@ -48,13 +48,21 @@
                           </ul>
                       </li>
                       <li>
-                        <button name="submit" id="submit" type="submit">Submit</button>
+                        <button name="submit" id="submit" type="button">Submit</button>
+                      </li>
+                      <li>
+                        <button name="activate" id="activate" type="button">Activate</button>
                       </li>
                     </ul>
                   </form>
-                  <!-- above form copied directly from https://webdesign.tutsplus.com/tutorials/building-responsive-forms-with-flexbox--cms-26767 and then modifeied -->
-                  <!-- It seems like a grey area to me to copy from the resources provided when said copied content almost completly answers 8 or more of the assignment questions, and I'm not sure what to dp about this.  I have no intentions of academic dishonesty -->
-            </div>
+              </div>
         </div>
         <script src="scripts/main.js"></script>
+        function testFunction() {
+          fetch('/api')
+          .then((response) => response.text())
+          .then((response) => {
+               console.log(response);
+          })
+        }
     </html>
