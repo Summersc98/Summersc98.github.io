@@ -50,10 +50,9 @@
                         </li>
                         <li>
                           <button name="submit" id="submit" type="submit">Submit</button>
-                        </li>
-                        <li>
                           <button onclick="testFunction()" name="activate" id="activate" type="button">Activate</button>
                         </li>
+
                       </ul>
                     </form>
                 </div>
@@ -75,6 +74,7 @@
                     document.body.style.backgroundColor = rndCol;
                     //i know i could've just picked a color, but the idea of it being different every time was just too cool
                     document.querySelector('.flex-outer').style.margin = "0 auto";
+                    document.querySelector('.checkbox-list-label').textContent = "fruits";
 
                     function lectureFunction() {
                       //this function is from the end of lecture 6.2
