@@ -36,12 +36,34 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // Start lab work
-      const test = fromServer.filter((individualCountry) => {
-        if (individualCountry.code === 'AX') {
-          return true; // return true means you keep it, return falso means you throw it out, but you dont need return false, it's assumed
+
+      // below chunk inspired by code from https://stackoverflow.com/questions/47907534/using-map-to-add-incrementing-values-to-js-objects
+      const indexedList = fromServer.map((uniqueCountry, index) => Object.assign({}, uniqueCountry, { id: index }));
+      // console.table(indexedList);
+
+      // random function from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
+      function getRandomInt(max) {
+        return Math.floor(Math.random() * Math.floor(max));
+      }
+
+      // i am unreasonably proud of this (probably) really bad code chunk
+      const tenUnique = [];
+      function get10unique() {
+        number = getRandomInt(243);
+        if (tenUnique.includes(number)) {
+          get10unique();
         }
-      });
-      console.log(test);
+        else {
+          tenUnique.push(number);
+        }
+        if (tenUnique.length < 10) {
+          get10unique();
+        }
+      }
+      get10unique();
+      console.log(tenUnique);
+
+
       // End lab work in here
       // UNCOMMENT THE BELOW LINE WHEN DONE, IT WAS JUST ANNOYING TO LOOK AT
       // console.log('fromServer', fromServer);
