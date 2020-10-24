@@ -68,8 +68,24 @@ document.body.addEventListener('submit', async (e) => {
           return true;
         }
       });
-      console.table(countrylist);
+      console.log(countrylist);
 
+      // since I'm basically using the original index values, and they were alphabetically sorted to begin with,
+      // i don't need to touch alphabetic sorting here
+      // i can just sort by id
+      const zyx = countrylist.sort(function(a, b) {
+        const indexA = a.id;
+        const indexB = b.id;
+        if(indexA > indexB) {
+          return -1;
+        }
+        else {
+          return 1;
+        }
+      });
+      console.table(zyx);
+
+      $('flex-inner').append(document.createTextNode('Hello'));
 
       // End lab work in here
       // UNCOMMENT THE BELOW LINE WHEN DONE, IT WAS JUST ANNOYING TO LOOK AT
