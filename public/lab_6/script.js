@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+/* eslint-disable no-unused-vars */
 // You may wish to find an effective randomizer function on MDN.
 
 function range(int) {
