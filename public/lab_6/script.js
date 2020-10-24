@@ -4,7 +4,7 @@
 // You may wish to find an effective randomizer function on MDN.
 
 // const { default: countries } = require("./countries");
-// how the frick did the above line just pop outta nowhere??? i didnt add this! >:(
+// how the frick did the above line just pop outta nowhere??? i didnt add this!
 
 function range(int) {
   const arr = [];
@@ -36,6 +36,10 @@ document.body.addEventListener('submit', async (e) => {
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
       // Start lab work
+
+      if (document.querySelector('.flex-inner')) {
+        document.querySelector('.flex-inner').remove();
+      }
 
       // random function from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
       function getRandomInt(max) {
@@ -89,6 +93,8 @@ document.body.addEventListener('submit', async (e) => {
       // newThing.appendChild(zyx);
       // document.body.insert
 
+      // below code chunk taken from lecture 7.2
+      // i really could not figure out how to do this one any other way
       const ul = document.createElement('ul');
       ul.className = 'flex-inner';
       $('form').prepend(ul);
