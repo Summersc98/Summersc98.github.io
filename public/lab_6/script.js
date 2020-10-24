@@ -44,7 +44,7 @@ document.body.addEventListener('submit', async (e) => {
 
       // below chunk inspired by code from https://stackoverflow.com/questions/47907534/using-map-to-add-incrementing-values-to-js-objects
       const indexedList = fromServer.map((uniqueCountry, index) => Object.assign({}, uniqueCountry, { id: index }));
-      console.table(indexedList);
+      // console.table(indexedList);
 
       // i am unreasonably proud of this (probably) really bad code chunk
       const tenUnique = [];
@@ -61,14 +61,13 @@ document.body.addEventListener('submit', async (e) => {
         }
       }
       get10unique();
-      console.log(tenUnique);
+      // console.log(tenUnique);
 
       const countrylist = indexedList.filter(function(individualCountry) {
         if(tenUnique.includes(individualCountry.id) === true) {
           return true;
         }
       });
-
       console.table(countrylist);
 
 
