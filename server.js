@@ -1,6 +1,9 @@
-// These are our required libraries to make the server work.
+/* eslint-disable linebreak-style */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-vars */
+
+// These are our required libraries to make the server work.
+
 import express from 'express';
 import dotenv from 'dotenv';
 
