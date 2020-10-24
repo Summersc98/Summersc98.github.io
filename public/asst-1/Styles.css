@@ -1,0 +1,124 @@
+/*This CSS was copied directly from my groupmembers repository so that I could have my own copy*/
+
+/*Global css*/
+.class_body {
+  background-color: #F0E85B;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.biggest_title {
+  font-family: 'Concert One', cursive;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.title {
+  font-family: 'Concert One', cursive;
+}
+
+.bigtitle {
+  color: #F0E85B;
+  font-size: 30px;
+}
+
+.header {
+  margin-bottom: 10px;
+  display: flex;
+  /*justify-content: space-between;*/
+  align-items: center;
+  background-color: #874DF0;
+  color: #F0E85B;
+  padding: 15px;
+  margin: 0;
+  margin-bottom: 15px;
+  flex-wrap: wrap;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 960px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content1 {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.content1 > p {
+  background-color: #874DF0;
+  padding: 12px;
+  border-radius: 16px;
+  border-width: 0px;
+  border-style: solid;
+}
+
+.steveimage {
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+  max-width: 199px;
+  margin-right: 15px;
+}
+
+.content2 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 66%;
+  background-color: #874DF0;
+  padding: 12px;
+  border-radius: 16px;
+  border-width: 0px;
+  border-style: solid;
+  margin-bottom: 15px;
+}
+
+
+/*Desktop specific css*/
+@media only screen and (min-width: 1000px) {
+  .header {
+    justify-content: space-between;
+  }
+  .container {
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .content1 {
+    flex: 0 1 auto;
+    margin-right: 15px;
+    flex-direction: column;
+    max-width: 33%;
+  }
+  .content2 {
+    flex-flow: row wrap;
+    flex: 2;
+  }
+}
+
+/*Mobile specific css*/
+@media only screen and (max-width: 1000px) {
+  .header {
+    justify-content: center;
+  }
+  .container {
+    justify-content: center;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .content1 {
+    flex: 1 0 auto;
+    margin-right: 0px;
+    flex-direction: row;
+    align-items: center;
+    max-width: 66%;
+    margin-bottom: 15px;
+  }
+}
