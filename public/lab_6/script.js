@@ -85,7 +85,19 @@ document.body.addEventListener('submit', async (e) => {
       });
       console.table(zyx);
 
-      $('flex-inner').append(document.createTextNode('Hello'));
+      // const newThing = document.createElement("ol");
+      // newThing.appendChild(zyx);
+      // document.body.insert
+
+      const ul = document.createElement('ul');
+      ul.className = 'flex-inner';
+      $('form').prepend(ul);
+      zyx.forEach((el, i) => {
+        const li = document.createElement('li');
+        $(li).append(`<input type="checkbox" value=${el.code} id=${el.code} />`);
+        $(li).append(`<label for=${el.code}>${el.name}</label>`);
+        $(ul).append(li);
+      });
 
       // End lab work in here
       // UNCOMMENT THE BELOW LINE WHEN DONE, IT WAS JUST ANNOYING TO LOOK AT
