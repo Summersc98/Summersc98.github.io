@@ -3,6 +3,9 @@
 /* eslint-disable no-unused-vars */
 // You may wish to find an effective randomizer function on MDN.
 
+// const { default: countries } = require("./countries");
+// how the frick did the above line just pop outta nowhere??? i didnt add this! >:(
+
 function range(int) {
   const arr = [];
   for (let i = 0; i < int; i += 1) {
@@ -32,8 +35,16 @@ document.body.addEventListener('submit', async (e) => {
   })
     .then((fromServer) => fromServer.json())
     .then((fromServer) => {
-      // You're going to do your lab work in here. Replace this comment.
-      console.log('fromServer', fromServer);
+      // Start lab work
+      const test = fromServer.filter((individualCountry) => {
+        if (individualCountry.code === 'AX') {
+          return true; // return true means you keep it, return falso means you throw it out, but you dont need return false, it's assumed
+        }
+      });
+      console.log(test);
+      // End lab work in here
+      // UNCOMMENT THE BELOW LINE WHEN DONE, IT WAS JUST ANNOYING TO LOOK AT
+      // console.log('fromServer', fromServer);
     })
     .catch((err) => console.log(err));
 });
