@@ -4,10 +4,12 @@
 
 // These are our required libraries to make the server work.
 
+import fetch from 'node-fetch';
 import express from 'express';
 import dotenv from 'dotenv';
 import countries from './public/lab_6/countries.js';
-import fetch from 'node-fetch';
+
+// fuck this linter
 
 dotenv.config();
 
