@@ -1,3 +1,6 @@
+/* eslint-disable linebreak-style */
+/* eslint-disable no-console */
+
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
   return list;
