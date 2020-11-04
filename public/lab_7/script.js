@@ -3,6 +3,59 @@
 
 function convertRestaurantsToCategories(restaurantList) {
   // process your restaurants here!
+  // start of code from demo
+  function range(int) {
+    const arr = [];
+    for (let i = 0; i < int; i += 1) {
+      arr.push(i);
+    }
+    return arr;
+  }
+  function getRandomIntInclusive(min, max) {
+    const min1 = Math.ceil(min);
+    const max1 = Math.floor(max);
+    return Math.floor(Math.random() * (max1 - min1 + 1) + min1); // The maximum is inclusive and the minimum is inclusive
+  }
+  async function loadData() {
+    const data = await fetch('https://data.princegeorgescountymd.gov/resource/umjn-t2iz.json');
+    const json = await data.json();
+  
+    const arrayOfTenItems = range(10);
+    const randomRestaurantsArray = arrayOfTenItems.map((item) => {
+      const which = getRandomIntInclusive(0, json.length);
+      const restaurant = json[which]; // we are not worrying about uniqueness here
+      return restaurant;
+    });
+    
+    console.log('this is 10 elements of our data as it comes in');
+    console.table(randomRestaurantsArray); // This shows the shape of our data as it arrives
+    // console.table(json);
+
+  
+    /// And now, how to get what we want
+    const newDataShape = json.reduce((collection, item, i) => {
+      // for each item, check if we have a category for that item already
+      const findCat = collection.find((findItem) => findItem.label === item.category);
+      
+      if (!findCat) {
+        collection.push({
+          label: item.category,
+          y: 1
+        });
+      } else {
+        const position = collection.findIndex(el => el.label === item.category);
+        collection[position].y += 1;
+      }
+      return collection;
+    }, []);
+  
+    console.log("here's the data in the shape we want it:")
+    console.table(newDataShape);
+  }
+  
+  window.onload = loadData;
+  // end of code from demo
+  const list = newDataShape;
   return list;
 }
 
@@ -67,3 +120,5 @@ document.body.addEventListener('submit', async (e) => {
       console.log(err);
     });
 });
+
+window.onload = convertRestaurantsToCategories();
