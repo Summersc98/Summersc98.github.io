@@ -15,6 +15,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Chris Summers Lab 7</title>
     <script
         src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
@@ -25,13 +26,18 @@
 <body>
     <div class="wrapper">
         <div class="container flex-outer">
-            <h1>Chris Summers' Lab 7 (version 3)</h1>
-            <div id='chartContainer'>
+            <div class="header">
+                <h1>Chris Summers' Lab 7</h1>
+            </div>
+            <form>
                 <button
                     type="submit"
-                    class="submitButton"
-                    name="submitButton"
+                    class="submit"
+                    name="submit"
                 >Launch Scripts</button>
+            </form>
+            <div id='chartContainer'>
+
             </div>
             <script src="canvasjs.min.js"></script>
             <script src="script.js"></script>
