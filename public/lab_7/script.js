@@ -49,7 +49,7 @@ function convertRestaurantsToCategories(restaurantList) {
       return collection;
     }, []);
   
-    console.log("here's the data in the shape we want it:")
+    console.log("here's the data in the shape we want it:");
     console.table(newDataShape);
   }
   
